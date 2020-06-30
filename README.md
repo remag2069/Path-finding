@@ -22,7 +22,7 @@ Path finding algorithms and their visualizations
 * Which will generate:
   * The map in digitized format:
     ![image](outputs/maze.png)
-  * The solution:
+  * The solution to the maze provided:
     ![image](outputs/A_star_solution.png)
   * The collection of all paths tried before reaching the solution (Cost)
     ![image](outputs/A_star_cost.png)
