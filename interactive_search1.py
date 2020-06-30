@@ -150,8 +150,11 @@ def check_neighbours(parent,maze,finish):
     return neighbours
 
 
-def not_explored(node,explored):
+def not_explored(node,explored,check):
     for i in explored:
+        if i.pos[0][0]==node.pos[0][0] and i.pos[1][0]==node.pos[1][0]:
+            return 0
+    for i in check.storage:
         if i.pos[0][0]==node.pos[0][0] and i.pos[1][0]==node.pos[1][0]:
             return 0
     return 1
@@ -191,6 +194,7 @@ def solve_maze(maze,type='stack'):
 
     while(True):
         cost+=1
+        # print(cost)
         if check.size()==0:
             print("no solution")
             break
@@ -208,12 +212,13 @@ def solve_maze(maze,type='stack'):
         
         for i in neighbours:
             # print('****************\n',i)
-            if not_explored(i,explored):
+            if not_explored(i,explored,check):
                 # print('##################\n',i)
                 check.add(i)
         # print('#############')
         # check.show_storage()
 
+    print("Algorithm used:",type)
     print("cost",cost)
     show_path(end_node,maze)
     show(maze_show_all)
