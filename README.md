@@ -24,7 +24,7 @@ Path finding algorithms and their visualizations
     ![image](outputs/maze.png)
   * The solution:
     ![image](outputs/A_star_solution.png)
-* The collection of all paths tried before reaching the solution (Cost):
+  * The collection of all paths tried before reaching the solution (Cost)
     ![image](outputs/A_star_cost.png)
 
 ## Results:
